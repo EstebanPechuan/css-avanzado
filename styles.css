@@ -1,0 +1,218 @@
+@import url('fuentes/styles.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body, html {
+	width: 100%;
+	height: 100vh;
+	transform-style: preserve-3d;
+	perspective: 3000px;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	font-family: ubuntu;
+	font-weight: 400;
+	width: 100%;
+	height: 100px;
+	background-color: lightgray;
+	box-shadow: 0px 1px 15px black;
+	z-index: 10000;
+}
+
+ul {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+li {
+	padding: 0 10px;
+	display: inline;
+	text-align: center;
+}
+
+li:hover {
+	font-weight: 700;
+}
+
+a {
+	line-height: 100px;
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
+}
+
+
+.boxGigante {
+	width: 100%;
+	height: 100vh;
+	transform-style: preserve-3d;
+	transform: translateZ(-683px);
+}
+
+.boxGiganteInicio {
+	width: 100%;
+	height: 100vh;
+	transform-style: preserve-3d;
+	transform: translateZ(-683px) rotate(0deg);
+}
+
+.boxGiganteServicios {
+	width: 100%;
+	height: 100vh;
+	transform-style: preserve-3d;
+	transform: translateX(-683px) rotateY(-90deg);
+}
+
+.boxGiganteGaleria {
+	width: 100%;
+	height: 100vh;
+	transform-style: preserve-3d;
+	transform: translateZ(683px) rotateY(-180deg);
+}
+
+.boxGiganteContacto {
+	width: 100%;
+	height: 100vh;
+	transform-style: preserve-3d;
+	transform: translateX(684px) rotateY(-270deg);
+}
+
+/* Section General */
+
+.inicio {
+	backface-visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: ubuntu;
+	font-size: 30px;
+	transition-duration: 0.5s;
+	background-color: rgba(0, 0, 255, 0.4);
+	transform: translateZ(683px);
+}
+
+
+/* Section Servicios */
+
+.servicios {
+	backface-visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-color: lightblue;
+	display: flex;
+	justify-content: space-evenly;
+	align-content: space-evenly;
+	transform: translateX(683px) translateZ(0px) rotateY(90deg);
+	flex-wrap: wrap;
+	transition-duration: 0.5s;
+}
+
+.cadaServ {
+	width: 40%;
+	height: 30%;
+	display: flex;
+
+	padding: 30px;
+	transition-duration: 0.5s;
+}
+
+.cadaServ:hover {
+	box-shadow: 0px 0px 15px #434343;
+}
+
+.fotoServ {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imgServ {
+	width: 75%;
+	height: 100%;
+	transition-duration: 0.2s;
+	border-radius: 50%;
+	cursor: pointer;
+	object-fit: cover;
+}
+
+.imgServ:hover {
+	border-radius: 5%;
+}
+
+.textoServ {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.textoServ p {
+	width: 80%;
+	height: 80%;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+/* Section Galeria */
+
+.galeria {
+	backface-visibility: hidden;
+	transform: translateZ(-683px) rotateY(180deg);
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-color: tomato;
+	transition-duration: 0.5s;
+}
+
+
+/* Section Contactos */
+
+.contacto {
+	backface-visibility: hidden;
+	transform: translateX(-683px) translateZ(0px) rotateY(-90deg);
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-color: darkgreen;
+	transition-duration: 0.5s;
+}
+
+
+
+@keyframes animServicios {
+	0% {
+		transform: translateZ(-683px) rotateY(0deg);
+	}
+
+	33% {
+		transform: translateZ(-1366px) rotateY(0deg);
+	}
+
+	66% {
+		transform: translateZ(-1366px) rotateY(90deg);
+	}
+
+	99% {
+		transform: translateZ(-683px) rotateY(90deg);
+	}
+}
